@@ -3,6 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-data-query": "^1.5.5",
+    "@progress/kendo-drawing": "^1.14.0",
+    "@progress/kendo-licensing": "^1.2.0",
+    "@progress/kendo-react-animation": "^4.9.0",
+    "@progress/kendo-react-data-tools": "^4.9.0",
+    "@progress/kendo-react-dateinputs": "^4.9.0",
+    "@progress/kendo-react-dropdowns": "^4.9.0",
+    "@progress/kendo-react-grid": "^4.9.0",
+    "@progress/kendo-react-inputs": "^4.9.0",
+    "@progress/kendo-react-intl": "^4.9.0",
+    "@progress/kendo-react-treeview": "^4.9.0",
+    "@progress/kendo-theme-bootstrap": "^4.41.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,9 +22,14 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@types/react-redux": "^7.1.19",
+    "axios": "^0.22.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-redux": "^7.2.5",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -20,7 +37,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pre-commit": "lint-staged",
+    "lint": "eslint ."
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "eslint --fix"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +63,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "lint-staged": "^11.2.2",
+    "prettier": "^2.4.1"
   }
 }
